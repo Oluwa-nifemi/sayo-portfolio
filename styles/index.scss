@@ -142,7 +142,7 @@ $font-ocr: "OCR", sans-serif;
   }
 
   &__carousel{
-    width: 80%;
+    width: 76%;
     margin-top: 14rem;
   }
 }
@@ -168,20 +168,24 @@ $font-ocr: "OCR", sans-serif;
   }
 }
 
-.menu-button{
+%menu-button{
   width: 500px;
   height: 80rem;
   $rad: 36rem;
   border-top-left-radius: $rad;
   border-bottom-left-radius: $rad;
-  background-color: white;
   position: fixed;
-  right: -44rem;
-  padding-left: 2.4rem;
+  right: -45rem;
+  padding-left: 1.4rem;
   top: 4rem;
   display: flex;
   align-items: center;
   justify-content: flex-start;
+}
+
+.menu-button{
+  @extend %menu-button;
+  background-color: white;
 }
 
 .menu{
@@ -224,19 +228,7 @@ $font-ocr: "OCR", sans-serif;
   }
 
   &__close-button{
-    width: 500px;
-    height: 80rem;
-    $rad: 36rem;
-    border-top-left-radius: $rad;
-    border-bottom-left-radius: $rad;
+    @extend %menu-button;
     background-color: black;
-    position: absolute;
-    right: -44rem;
-    padding-left: 2.4rem;
-    top: 4rem;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-
   }
 }
