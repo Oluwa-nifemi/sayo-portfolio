@@ -1,0 +1,15 @@
+@mixin ratio($height, $width) {
+  font-size: 0;
+  overflow: hidden;
+  position: relative;
+  aspect-ratio: calc($width / $height);
+
+  @supports (aspect-ratio: calc($width / $height)) {
+    &:after {
+      content: "";
+      display: inline-block;
+      padding-top: calc($height / $width) * 100%;
+      width: 100%;
+    }
+  }
+}

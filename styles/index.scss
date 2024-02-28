@@ -1,3 +1,102 @@
+@import "./core/reset";
+@import "./core/globals";
+@import "./core/fonts";
+@import "./core/mixins";
+
 html{
-  background: red;
+  background: #F3E6E5;
+}
+
+body{
+  padding: 4rem;
+}
+
+$purple: #8E44D8;
+$black: #000;
+$font-nexa: "Nexa", sans-serif;
+$font-ocr: "OCR", sans-serif;
+
+%section{
+  min-height: max(800px, 80vh);
+  background-image: url("/grid-background.png");
+  background-size: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 12rem;
+  position: relative;
+
+  & + &{
+    margin-top: 100px;
+  }
+}
+
+%header{
+  font-size: 6.4rem;
+  line-height: 7.68rem;
+  color: $purple;
+  font-weight: 500;
+  font-family: $font-nexa;
+}
+
+%subtext{
+  font-size: 2.4rem;
+  line-height: 50px;
+  color: $black;
+  font-family: $font-ocr;
+}
+
+.landing{
+  @extend %section;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  &__image{
+    aspect-ratio: 1;
+    width: 30%;
+    margin-bottom: 4.8rem;
+  }
+
+  &__header{
+    font-size: 9.6rem;
+    color: $purple;
+    margin-bottom: 1.6rem;
+    font-family: "Nexa";
+    font-weight: 400;
+  }
+
+  &__subtext{
+    @extend %subtext;
+  }
+}
+
+.about{
+  @extend %section;
+
+  &__header{
+    @extend %header;
+  }
+
+  &__subtext{
+    @extend %subtext;
+    width: 65%;
+  }
+
+  &__content{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__image{
+    @include ratio(961, 665);
+    width: 332px;
+    height: 480px;
+    transform: rotate(8.74deg);
+
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
 }
