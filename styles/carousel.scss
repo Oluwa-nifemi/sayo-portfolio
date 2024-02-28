@@ -7,6 +7,22 @@
     height: auto;
     position: relative;
     z-index: 2;
+
+    &.absolute{
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      opacity: 0;
+      transform: translate(-50%, -50%);
+      will-change: width, height, left, top;
+      height: 60%;
+      width: auto;
+      z-index: 30;
+
+      &.show{
+        opacity: 1;
+      }
+    }
   }
 
   &__preview{
@@ -28,6 +44,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition-duration: 300ms;
+
+    &.active{
+      opacity: 1;
+      pointer-events: auto;
+    }
 
     &__overlay{
       background: rgba(0, 0, 0, 0.6);
