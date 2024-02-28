@@ -57,6 +57,13 @@
     &__image{
       height: 80%;
       width: auto;
+      opacity: 0;
+      transition-duration: 500ms;
+      position: absolute;
+
+      &.active{
+        opacity: 1;
+      }
     }
 
     &__left{
