@@ -94,7 +94,7 @@ const toggleMenu = () => menuIsOpen.value = !menuIsOpen.value
                 This is a study background I painted as one of my projects for Izzy Burton,s course on Cinematic Digital Illustration with Photoshop. You also get to see snapshots of my progress from start to finish.
             </p>
         </div>
-        <carousel id="bg-painting-1" :count="12" class="illustrations-v__carousel"/>
+        <carousel id="bg-painting-1" :count="6" class="illustrations-v__carousel"/>
     </section>
     <section id="bg-painting-2" class="illustrations-h">
         <div>
@@ -108,7 +108,7 @@ const toggleMenu = () => menuIsOpen.value = !menuIsOpen.value
                 This is a study background I painted as one of my projects for Izzy Burton,s course on Cinematic Digital Illustration with Photoshop. You also get to see snapshots of my progress from start to finish.
             </p>
         </div>
-        <carousel id="bg-painting-2" :count="12" class="illustrations-h__carousel"/>
+        <carousel id="bg-painting-2" :count="3" class="illustrations-h__carousel"/>
     </section>
     <section id="bg-painting-3" class="illustrations-v">
         <div>
@@ -120,7 +120,7 @@ const toggleMenu = () => menuIsOpen.value = !menuIsOpen.value
                 This is a study background I painted. You also get to see snapshots of my progress from start to finish.I used Adobe Photoshop for this.
             </p>
         </div>
-        <carousel id="bg-painting-3" :count="12" class="illustrations-v__carousel"/>
+        <carousel id="bg-painting-3" :count="6" class="illustrations-v__carousel"/>
     </section>
     <section id="bg-painting-4" class="illustrations-h">
         <div>
@@ -131,7 +131,7 @@ const toggleMenu = () => menuIsOpen.value = !menuIsOpen.value
                 This is a study background of the Eko Bridge in Lagos, Nigeria. I used Adobe Photoshop for this as well. There are also some progress shots.
             </p>
         </div>
-        <carousel id="bg-painting-4" :count="12" class="illustrations-h__carousel"/>
+        <carousel id="bg-painting-4" :count="3" class="illustrations-h__carousel"/>
     </section>
     <section id="contact" class="contact">
         <h1 class="contact__header">
