@@ -7,6 +7,9 @@
 
 html{
   background: #F3E6E5;
+  width: 100vw;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body{
@@ -162,5 +165,78 @@ $font-ocr: "OCR", sans-serif;
     font-family: $font-ocr;
     @extend %link;
     width: fit-content;
+  }
+}
+
+.menu-button{
+  width: 500px;
+  height: 80rem;
+  $rad: 36rem;
+  border-top-left-radius: $rad;
+  border-bottom-left-radius: $rad;
+  background-color: white;
+  position: fixed;
+  right: -44rem;
+  padding-left: 2.4rem;
+  top: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.menu{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #8E44D8;
+  padding: 2.4rem 1.6rem 4rem;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+  overflow: hidden;
+
+  &__logo{
+    width: 60px;
+  }
+
+  &__content{
+    background-image: url("/grid-background.png");
+    flex-grow: 1;
+    padding-top: 8rem;
+    padding-left: 44%;
+    background-size: 100%;
+  }
+
+  &__links{
+    display: grid;
+    row-gap: 5rem;
+  }
+
+  &__link{
+    font-size: 4rem;
+    color: #FFF;
+    @extend %link--hidden;
+    font-family: $font-ocr;
+    line-height: 1;
+    width: fit-content;
+  }
+
+  &__close-button{
+    width: 500px;
+    height: 80rem;
+    $rad: 36rem;
+    border-top-left-radius: $rad;
+    border-bottom-left-radius: $rad;
+    background-color: black;
+    position: absolute;
+    right: -44rem;
+    padding-left: 2.4rem;
+    top: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
   }
 }

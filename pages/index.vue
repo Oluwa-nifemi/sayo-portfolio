@@ -1,6 +1,42 @@
 <script setup lang="ts">
 import Logo from "~/images/logo.svg"
-import LandingImage from "~/assets/images/landing.png"
+import Hamburger from "~/images/hamburger.svg"
+import Close from "~/images/close.svg"
+
+const menuLinks = [
+    {
+        text: "About Me",
+        id: "about"
+    },
+    {
+        text: "Illustrations",
+        id: "illustrations",
+    },
+    {
+        text: "Background Painting 1",
+        id: "bg-painting-1",
+    },
+    {
+        text: "Background Painting 2",
+        id: "bg-painting-2",
+    },
+    {
+        text: "Background Painting 3",
+        id: "bg-painting-3",
+    },
+    {
+        text: "Background Painting 4",
+        id: "bg-painting-4",
+    },
+    {
+        text: "Contact Info",
+        id: "contact",
+    },
+]
+
+const menuIsOpen = ref(false);
+
+const toggleMenu = () => menuIsOpen.value = !menuIsOpen.value
 </script>
 
 <template>
@@ -14,7 +50,7 @@ import LandingImage from "~/assets/images/landing.png"
             background design artist and illustrator
         </p>
     </section>
-    <section class="about">
+    <section class="about" id="about">
         <h1 class="about__header">
             About Me
         </h1>
@@ -35,7 +71,7 @@ import LandingImage from "~/assets/images/landing.png"
             </figure>
         </div>
     </section>
-    <section class="illustrations-h">
+    <section class="illustrations-h" id="illustrations">
         <div>
             <h1 class="illustrations-h__heading">
                 Illustrations
@@ -49,7 +85,7 @@ import LandingImage from "~/assets/images/landing.png"
         </div>
         <carousel id="illustrations" :count="12" class="illustrations-h__carousel"/>
     </section>
-    <section class="illustrations-v">
+    <section id="bg-painting-1" class="illustrations-v">
         <div>
             <h1 class="illustrations-v__heading">
                 Background Painting 1
@@ -60,7 +96,7 @@ import LandingImage from "~/assets/images/landing.png"
         </div>
         <carousel id="bg-painting-1" :count="12" class="illustrations-v__carousel"/>
     </section>
-    <section class="illustrations-h">
+    <section id="bg-painting-2" class="illustrations-h">
         <div>
             <h1 class="illustrations-h__heading">
                 Background Painting 2
@@ -74,7 +110,7 @@ import LandingImage from "~/assets/images/landing.png"
         </div>
         <carousel id="bg-painting-2" :count="12" class="illustrations-h__carousel"/>
     </section>
-    <section class="illustrations-v">
+    <section id="bg-painting-3" class="illustrations-v">
         <div>
             <h1 class="illustrations-v__heading">
                 Background Painting 3
@@ -86,7 +122,7 @@ import LandingImage from "~/assets/images/landing.png"
         </div>
         <carousel id="bg-painting-3" :count="12" class="illustrations-v__carousel"/>
     </section>
-    <section class="illustrations-h">
+    <section id="bg-painting-4" class="illustrations-h">
         <div>
             <h1 class="illustrations-h__heading">
                 Background Painting 4
@@ -97,7 +133,7 @@ import LandingImage from "~/assets/images/landing.png"
         </div>
         <carousel id="bg-painting-4" :count="12" class="illustrations-h__carousel"/>
     </section>
-    <section class="contact">
+    <section id="contact" class="contact">
         <h1 class="contact__header">
             Contact Info.
         </h1>
@@ -105,6 +141,20 @@ import LandingImage from "~/assets/images/landing.png"
             kiishicreatesart@gmail.com
         </a>
     </section>
+    <button class="menu-button" @click="toggleMenu">
+        <Hamburger/>
+    </button>
+    <aside class="menu" v-if="menuIsOpen">
+        <img src="~/assets/images/menu-logo.png" class="menu__logo" alt="">
+        <div class="menu__content">
+            <div class="menu__links">
+                <a v-for="link in menuLinks" @click="toggleMenu" :href="`#${link.id}`" class="menu__link">{{link.text}}</a>
+            </div>
+        </div>
+        <button class="menu__close-button" @click="toggleMenu">
+            <Close/>
+        </button>
+    </aside>
 </template>
 
 <style scoped>
