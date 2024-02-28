@@ -35,6 +35,76 @@ import LandingImage from "~/assets/images/landing.png"
             </figure>
         </div>
     </section>
+    <section class="illustrations-h">
+        <div>
+            <h1 class="illustrations-h__heading">
+                Illustrations
+            </h1>
+            <p class="illustrations-h__subtext">
+                <br/>
+                <br/>
+                This is a collection of paintings I made in Adobe Photoshop called the Beauty in Black Collection.
+                I made them to represent -as the name implies- the beauty in blackness; specifically in black women. They are 12 silhouettes that feature different body and hair types.
+            </p>
+        </div>
+        <carousel id="illustrations" :count="12" class="illustrations-h__carousel"/>
+    </section>
+    <section class="illustrations-v">
+        <div>
+            <h1 class="illustrations-v__heading">
+                Background Painting 1
+            </h1>
+            <p class="illustrations-v__subtext">
+                This is a study background I painted as one of my projects for Izzy Burton,s course on Cinematic Digital Illustration with Photoshop. You also get to see snapshots of my progress from start to finish.
+            </p>
+        </div>
+        <carousel id="bg-painting-1" :count="12" class="illustrations-v__carousel"/>
+    </section>
+    <section class="illustrations-h">
+        <div>
+            <h1 class="illustrations-h__heading">
+                Background Painting 2
+            </h1>
+            <p class="illustrations-h__subtext">
+                <br/>
+                <br/>
+
+                This is a study background I painted as one of my projects for Izzy Burton,s course on Cinematic Digital Illustration with Photoshop. You also get to see snapshots of my progress from start to finish.
+            </p>
+        </div>
+        <carousel id="bg-painting-2" :count="12" class="illustrations-h__carousel"/>
+    </section>
+    <section class="illustrations-v">
+        <div>
+            <h1 class="illustrations-v__heading">
+                Background Painting 3
+            </h1>
+            <p class="illustrations-v__subtext">
+
+                This is a study background I painted. You also get to see snapshots of my progress from start to finish.I used Adobe Photoshop for this.
+            </p>
+        </div>
+        <carousel id="bg-painting-3" :count="12" class="illustrations-v__carousel"/>
+    </section>
+    <section class="illustrations-h">
+        <div>
+            <h1 class="illustrations-h__heading">
+                Background Painting 4
+            </h1>
+            <p class="illustrations-h__subtext">
+                This is a study background of the Eko Bridge in Lagos, Nigeria. I used Adobe Photoshop for this as well. There are also some progress shots.
+            </p>
+        </div>
+        <carousel id="bg-painting-4" :count="12" class="illustrations-h__carousel"/>
+    </section>
+    <section class="contact">
+        <h1 class="contact__header">
+            Contact Info.
+        </h1>
+        <a href="mailto:kiishicreatesart@gmail.com" class="contact__email">
+            kiishicreatesart@gmail.com
+        </a>
+    </section>
 </template>
 
 <style scoped>
