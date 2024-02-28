@@ -39,19 +39,19 @@ const handleRight = () => {
             <img :src="`${basePath}/2.jpg`" alt="" class="carousel__preview">
         </div>
       <div class="modal" v-if="modalOpen">
-        <div class="modal__overlay"/>
-          <div class="modal__main">
-              <button class="modal__close" @click="toggleModalOpen">
-                  <Close/>
-              </button>
-
-              <img v-for="i in count" :src="`${basePath}/${i}.jpg`" alt="" class="modal__image" :class="{active: activeImage === i}">
-              <button class="modal__left" @click="handleLeft" :disabled="activeImage === 1">
-                  <Left/>
-              </button>
-              <button class="modal__right" @click="handleRight" :disabled="activeImage === count">
-                  <Right/>
-              </button>
+        <div class="modal__overlay" @click="toggleModalOpen"/>
+          <button class="modal__close" @click="toggleModalOpen">
+              <Close/>
+          </button>
+          <button class="modal__left" @click="handleLeft" :disabled="activeImage === 1">
+              <Left/>
+          </button>
+          <button class="modal__right" @click="handleRight" :disabled="activeImage === count">
+              <Right/>
+          </button>
+          <img v-for="i in count" :src="`${basePath}/${i}.jpg`" alt="" class="modal__image" :class="{active: activeImage === i}">
+          <div class="modal__dots">
+              <span v-for="i in count" class="modal__dot" :class="{active: activeImage === i}"/>
           </div>
       </div>
     </div>

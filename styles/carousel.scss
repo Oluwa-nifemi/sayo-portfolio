@@ -69,10 +69,11 @@
     &__left{
       position: absolute;
       top: 50%;
-      left: 40px;
+      left: 20px;
       transform: translateY(-50%);
       background: transparent;
       border: none;
+      padding: 20px;
 
       &:disabled{
         opacity: 0.4;
@@ -83,12 +84,36 @@
     &__right{
       position: absolute;
       top: 50%;
-      right: 40px;
+      right: 20px;
       transform: translateY(-50%);
+      padding: 20px;
 
       &:disabled{
         opacity: 0.4;
         cursor: not-allowed;
+      }
+    }
+
+    &__dots{
+      display: flex;
+      column-gap: 10px;
+      align-items: center;
+      position: absolute;
+      bottom: 10%;
+    }
+
+    &__dot{
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: white;
+      opacity: 0.7;
+      transition-duration: 500ms;
+      display: flex;
+
+      &.active{
+        background: #8E44D8;
+        opacity: 1;
       }
     }
   }
