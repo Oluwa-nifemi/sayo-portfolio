@@ -133,9 +133,6 @@ const toggleMenu = () => menuIsOpen.value = !menuIsOpen.value
             kiishicreatesart@gmail.com
         </a>
     </section>
-    <button class="back-to-top">
-        Back to top
-    </button>
     <button class="menu-button" @click="toggleMenu">
         <Hamburger/>
     </button>
