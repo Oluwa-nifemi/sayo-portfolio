@@ -40,7 +40,7 @@ const toggleMenu = () => menuIsOpen.value = !menuIsOpen.value
 </script>
 
 <template>
-    <Logo/>
+    <img src="~/assets/images/logo.png" alt="Sayo's Signature" class="logo"/>
     <section class="landing">
         <img src="~/assets/images/landing.png" alt="" class="landing__image">
         <h1 class="landing__header">
@@ -56,8 +56,6 @@ const toggleMenu = () => menuIsOpen.value = !menuIsOpen.value
         </h1>
         <div class="about__content">
             <p class="about__subtext">
-                <br/>
-                <br/>
                 Hello,
                 <br/>
                 <br/>
@@ -77,8 +75,6 @@ const toggleMenu = () => menuIsOpen.value = !menuIsOpen.value
                 Illustrations
             </h1>
             <p class="illustrations-h__subtext">
-                <br/>
-                <br/>
                 This is a collection of paintings I made in Adobe Photoshop called the Beauty in Black Collection.
                 I made them to represent -as the name implies- the beauty in blackness; specifically in black women. They are 12 silhouettes that feature different body and hair types.
             </p>
@@ -102,9 +98,6 @@ const toggleMenu = () => menuIsOpen.value = !menuIsOpen.value
                 Background Painting 2
             </h1>
             <p class="illustrations-h__subtext">
-                <br/>
-                <br/>
-
                 This is a study background I painted as one of my projects for Izzy Burton,s course on Cinematic Digital Illustration with Photoshop. You also get to see snapshots of my progress from start to finish.
             </p>
         </div>
@@ -116,7 +109,6 @@ const toggleMenu = () => menuIsOpen.value = !menuIsOpen.value
                 Background Painting 3
             </h1>
             <p class="illustrations-v__subtext">
-
                 This is a study background I painted. You also get to see snapshots of my progress from start to finish.I used Adobe Photoshop for this.
             </p>
         </div>
@@ -141,11 +133,14 @@ const toggleMenu = () => menuIsOpen.value = !menuIsOpen.value
             kiishicreatesart@gmail.com
         </a>
     </section>
+    <button class="back-to-top">
+        Back to top
+    </button>
     <button class="menu-button" @click="toggleMenu">
         <Hamburger/>
     </button>
     <aside class="menu" v-if="menuIsOpen">
-        <img src="~/assets/images/menu-logo.png" class="menu__logo" alt="">
+        <img src="~/assets/images/logo-menu.png" class="menu__logo" alt=""/>
         <div class="menu__content">
             <div class="menu__links">
                 <a v-for="link in menuLinks" @click="toggleMenu" :href="`#${link.id}`" class="menu__link">{{link.text}}</a>

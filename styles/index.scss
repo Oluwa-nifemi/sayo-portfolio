@@ -14,6 +14,7 @@ html{
 
 body{
   padding: 4rem;
+  position: relative;
 }
 
 $purple: #8E44D8;
@@ -42,13 +43,20 @@ $font-ocr: "OCR", sans-serif;
   color: $purple;
   font-weight: 500;
   font-family: $font-nexa;
+  margin-bottom: 4rem;
 }
 
 %subtext{
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   line-height: 5rem;
   color: $black;
   font-family: $font-ocr;
+  font-weight: 400;
+  letter-spacing: .3rem;
+}
+
+.logo{
+  width: 11.8rem;
 }
 
 .landing{
@@ -59,7 +67,8 @@ $font-ocr: "OCR", sans-serif;
 
   &__image{
     aspect-ratio: 1;
-    width: 30%;
+    width: 44.4rem;
+    max-width: 80%;
     margin-bottom: 4.8rem;
   }
 
@@ -81,6 +90,8 @@ $font-ocr: "OCR", sans-serif;
 
   &__header{
     @extend %header;
+    text-align: center;
+    margin-bottom: 0;
   }
 
   &__subtext{
@@ -168,6 +179,18 @@ $font-ocr: "OCR", sans-serif;
   }
 }
 
+.back-to-top{
+  width: 483px;
+  height: 789px;
+
+  position: absolute;
+  bottom: -400px;
+  $radius: 300px;
+  border-top-left-radius: $radius;
+  border-top-right-radius: $radius;
+  background-color: white;
+}
+
 %menu-button{
   width: 500px;
   height: 80rem;
@@ -195,14 +218,14 @@ $font-ocr: "OCR", sans-serif;
   height: 100%;
   width: 100%;
   background-color: #8E44D8;
-  padding: 2.4rem 1.6rem 4rem;
+  padding: 4rem;
   display: flex;
   flex-direction: column;
   z-index: 10;
   overflow: hidden;
 
   &__logo{
-    width: 60px;
+    width: 118px;
   }
 
   &__content{
