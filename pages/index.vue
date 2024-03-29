@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import Logo from "~/images/logo.svg"
 import Hamburger from "~/images/hamburger.svg"
 import Close from "~/images/close.svg"
 
@@ -7,6 +6,10 @@ const menuLinks = [
     {
         text: "About Me",
         id: "about"
+    },
+    {
+        text: "Animated Video",
+        id: "video"
     },
     {
         text: "Illustrations",
@@ -68,6 +71,12 @@ const toggleMenu = () => menuIsOpen.value = !menuIsOpen.value
                 <img src="~/assets/images/about.png" alt="">
             </figure>
         </div>
+    </section>
+    <section class="video" id="video">
+        <h3 class="video__header">
+            Animated Video
+        </h3>
+        <video src="https://res.cloudinary.com/daysjruko/video/upload/v1711718859/video_zl8gxv.mp4" controls></video>
     </section>
     <section class="illustrations-h" id="illustrations">
         <div>

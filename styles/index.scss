@@ -117,6 +117,16 @@ $font-ocr: "OCR", sans-serif;
   }
 }
 
+.video{
+    @extend %section;
+
+    &__header{
+      @extend %header;
+      text-align: center;
+      margin-bottom: 5.2rem;
+    }
+}
+
 .illustrations-h{
   @extend %section;
   flex-direction: row;
@@ -222,7 +232,7 @@ $font-ocr: "OCR", sans-serif;
   display: flex;
   flex-direction: column;
   z-index: 10;
-  overflow: hidden;
+  overflow: auto;
 
   &__logo{
     width: 118px;
@@ -238,16 +248,17 @@ $font-ocr: "OCR", sans-serif;
 
   &__links{
     display: grid;
-    row-gap: 5rem;
+    row-gap: 3rem;
   }
 
   &__link{
-    font-size: 4rem;
+    font-size: 3rem;
     color: #FFF;
     @extend %link--hidden;
     font-family: $font-ocr;
     line-height: 1;
     width: fit-content;
+    letter-spacing: .3rem;
   }
 
   &__close-button{
